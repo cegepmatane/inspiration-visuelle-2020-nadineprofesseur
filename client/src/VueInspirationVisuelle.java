@@ -5,8 +5,10 @@ import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.PasswordField;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import modele.Pensee;
 
 public class VueInspirationVisuelle extends Application {
 	public VueInspirationVisuelle()
@@ -26,6 +28,14 @@ public class VueInspirationVisuelle extends Application {
 		stade.setScene(scene);
 		stade.show();
 	}	
+	public void afficherPensee(Pensee pensee)
+	{
+    	System.out.println("afficherPensee( )");
+
+		TextArea zonePensee = (TextArea)scene.lookup("#zonepensee");
+		//zonePensee.setText("coucou");		
+		zonePensee.setText(pensee.getMessage() + " (" + pensee.getAuteur() + ")");
+	}
 	
 	
 }
