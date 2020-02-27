@@ -34,7 +34,7 @@ public class VueInspirationVisuelle extends Application {
 
 		TextArea zonePensee = (TextArea)scene.lookup("#zonepensee");
 		//zonePensee.setText("coucou");		
-		zonePensee.setText(pensee.getMessage() + " (" + pensee.getAuteur() + ")");
+		zonePensee.setText(pensee.getMessage() + " (" + pensee.getAuteur() + ") - " + pensee.getAnnee());
 	}
 	
 	

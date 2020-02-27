@@ -5,12 +5,20 @@ public class Pensee {
 	protected int idPensee;
 	protected String auteur;
 	protected String message;
-	
+	protected int annee;
 	
 	public Pensee(String auteur, String message) {
 		super();
 		this.auteur = auteur;
 		this.message = message;
+	}
+	
+	public int getAnnee() {
+		return annee;
+	}
+
+	public void setAnnee(int annee) {
+		this.annee = annee;
 	}
 	
 	public int getId() {
