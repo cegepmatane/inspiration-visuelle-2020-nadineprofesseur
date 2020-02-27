@@ -21,6 +21,7 @@ foreach($listePensees as $pensee)
 		<auteur><?=($pensee->auteur)?></auteur>
 		<message><?=($pensee->message)?></message>
 		<id><?=$pensee->idPensee?></id>
+		<annee><?=$pensee->annee?></annee>
 	</pensee>
 	<?php
 }
