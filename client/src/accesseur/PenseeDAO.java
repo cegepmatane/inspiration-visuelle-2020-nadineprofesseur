@@ -22,18 +22,26 @@ public class PenseeDAO implements PenseeURL{
 	{
 		JournalDesactivable.ecrire("listerPensees()");			
 		String xml = null;		
+		
+		try {
+			URL urlListePensees = new URL(URL_LISTE_PENSEES);
+			String derniereBalise = "</pensees>";
+			InputStream flux = urlListePensees.openConnection().getInputStream();
+			Scanner lecteur = new Scanner(flux);
+			lecteur.useDelimiter(derniereBalise); 
+			xml = lecteur.next() + derniereBalise;
+			lecteur.close();
+			Journal.ecrire(2, "xml : " + xml);			
+			
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		
 		if(null == xml) return null;
 		
-		//return decodeur.decoderListe(xml);
-		return null;
+		return decodeur.decoderListe(xml);
 	}
 	
-	public void ajouterPensee(Pensee pensee)
-	{
-		Journal.ecrire(1, "ajouterPensee()");			
-		String xml = "";
-		//decodeur.decoderReponseAction(xml);
-	}
 }
 
 /*
