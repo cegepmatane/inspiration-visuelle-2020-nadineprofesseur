@@ -1,0 +1,1 @@
+ALTER TABLE `pensee` ADD `annee` INT NOT NULL AFTER `message`;

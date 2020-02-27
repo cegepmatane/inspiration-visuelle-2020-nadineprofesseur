@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.7.7
+-- version 4.8.5
 -- https://www.phpmyadmin.net/
 --
--- Hôte : localhost:3306
--- Généré le :  mar. 03 avr. 2018 à 05:47
--- Version du serveur :  5.7.21
--- Version de PHP :  7.1.13
+-- Hôte : 127.0.0.1
+-- Généré le :  jeu. 27 fév. 2020 à 15:51
+-- Version du serveur :  10.1.38-MariaDB
+-- Version de PHP :  7.3.4
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET AUTOCOMMIT = 0;
@@ -31,18 +31,17 @@ SET time_zone = "+00:00";
 CREATE TABLE `pensee` (
   `idPensee` int(11) NOT NULL,
   `auteur` varchar(255) NOT NULL,
-  `message` text NOT NULL
+  `message` text NOT NULL,
+  `annee` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 --
 -- Déchargement des données de la table `pensee`
 --
 
-INSERT INTO `pensee` (`idPensee`, `auteur`, `message`) VALUES
-(1, 'Douglas Kennedy', 'L\'expérience est le mot par lequel les hommes désignent leurs erreurs.'),
-(2, 'George Orwell', 'The Truth is Heresy in the Empire of lies.'),
-(3, 'St-Exupéry', 'Faites que le rêve dévore votre vie afin que la vie ne dévore pas votre rêve.'),
-(4, 'Leonardo da Vinci', 'Once you have tasted the taste of sky, you will forever look up.\r\n');
+INSERT INTO `pensee` (`idPensee`, `auteur`, `message`, `annee`) VALUES
+(2, 'George Orwell', 'The Truth is Heresy in the Empire of lies.', 1970),
+(4, 'Leonardo da Vinci', 'Once you have tasted the taste of sky, you will forever look up.\r\n', 1500);
 
 --
 -- Index pour les tables déchargées
